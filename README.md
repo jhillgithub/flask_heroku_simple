@@ -103,6 +103,30 @@ python app.py
 
 3. `ctrl-c` to quit
 
+----
+
+## GIT Setup
+
+### Init Repo
+
+```
+git add -A
+git commit -m "init repo"
+```
+
+### Push to Github
+
+1. Create Empty repo on github
+
+2. Push files to github
+
+```
+git remote add origin https://github.com/<github account>/<repo name>.git
+git push -u origin master
+```
+
+----
+
 ## Heroku Setup
 
 ### Login to heroku
@@ -113,10 +137,21 @@ heroku login
 
 ### Create the heroku app
 
-
 ```
 cd /path/to/app
 heroku create
+```
+
+### Deploy the app
+
+```
+git push heroku master
+```
+
+### Open the app
+
+```
+heroku open
 ```
 
 Note: Make sure that you are inside of the app repo folder before running `heroku create`
